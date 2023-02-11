@@ -12,3 +12,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.Image :hover {
+  transform: rotateX(30deg);
+}
+
+@media (max-width: 900px) {
+   .Image {
+    width: 400px !important;
+   }
+}

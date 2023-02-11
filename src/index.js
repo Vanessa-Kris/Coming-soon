@@ -4,6 +4,7 @@ import './index.css';
 import Home from  './Home.js'
 import CountDown from './CountDown';
 import Content from './Content';
+import Subscribe from './Subscribe';
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
     <Home/>
     <CountDown/>
     <Content/>
+    <Subscribe/>
     </>
   );
 }
