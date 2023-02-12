@@ -91,10 +91,10 @@ function Content() {
         <Container fluid>
           <Row>
             <Col xs={6} md={2} className="bannerimg">
-              <img src="./coming/30.jpeg" alt="Gown" />
+              <img src="./coming/31.JPG" alt="Gown" />
             </Col>
             <Col xs={6} md={2} className="bannerimg">
-              <img src="./coming/24.jpeg" alt="Gown" />
+              <img src="./coming/27.jpeg" alt="Gown" />
             </Col>
             <Col xs={6} md={2} className="bannerimg">
               <img src="./coming/29.jpeg" alt="Gown" />
@@ -103,7 +103,7 @@ function Content() {
               <img src="./coming/15.jpeg" alt="Gown" />
             </Col>
             <Col xs={6} md={2} className="bannerimg">
-              <img src="./coming/14.jpeg" alt="Gown" />
+              <img src="./coming/1.jpeg" alt="Gown" />
             </Col>
             <Col xs={6} md={2} className="bannerimg">
               <img src="./coming/13.jpeg" alt="Gown" />
@@ -114,58 +114,5 @@ function Content() {
     </Carousel>
   );
 }
-
-// const itemData = [
-//   {
-//     img: "./coming/34.JPG",
-//     title: "Breakfast",
-//     className: "Image",
-//   },
-//   {
-//     img: "./coming/2.jpeg",
-//     title: "Burger",
-//   },
-//   {
-//     img: "./coming/33.JPG",
-//     title: "Camera",
-//   },
-//   {
-//     img: "./coming/18.jpeg",
-//     title: "Coffee",
-//   },
-//   {
-//     img: "./coming/22.jpeg",
-//     title: "Hats",
-//   },
-//   {
-//     img: "./coming/10.jpeg",
-//     title: "Honey",
-//     author: "@arwinneil",
-//   },
-//   {
-//     img: "./coming/9.jpeg",
-//     title: "Basketball",
-//   },
-//   {
-//     img: "./coming/17.jpeg",
-//     title: "Fern",
-//   },
-//   {
-//     img: "./coming/4.png",
-//     title: "Mushrooms",
-//   },
-//   {
-//     img: "./coming/20.jpeg",
-//     title: "Tomato basil",
-//   },
-//   {
-//     img: "./coming/13.jpeg",
-//     title: "Sea star",
-//   },
-//   {
-//     img: "./coming/32.JPG",
-//     title: "Bike",
-//   },
-// ];
 
 export default Content;

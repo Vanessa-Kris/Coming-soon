@@ -40,7 +40,7 @@ function CountDown() {
           textDecoration: "none",
         }}
       >
-        <Countdown date={Date.now() + 1000 * 60 * 60 * 24} />
+        <Countdown date={Date.now() + 10000 * 60 * 60 * 60} />
       </Typography>
     </>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-
+import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
@@ -10,76 +10,98 @@ import Container from "@mui/material/Container";
 
 function Subscribe() {
   return (
-    <Container component="main" maxWidth="xs">
-      <CssBaseline />
-      <Box
+    <>
+      <Typography
+        spacing="3"
+        align="center"
+        justifyContent="center"
+        variant="h2"
+        className="mt-5"
+        noWrap
         sx={{
-          marginTop: 8,
-
-          alignItems: "center",
+          mr: 1,
+          display: { xs: "block", md: "flex" },
+          fontFamily: "monospace",
+          fontWeight: 700,
+          fontSize: { xs: 14, md: 21 },
+          color: "#fff",
+          textDecoration: "none",
         }}
       >
-        <Box component="form" noValidate sx={{ mt: 3 }}>
-          <Grid container spacing={2}>
-            <Grid item xs={12}>
-              <TextField
-                required
-                fullWidth
-                id="Name"
-                label="Name"
-                name="name"
-                autoComplete="name"
-              />
-            </Grid>
-          </Grid>
+        Subscribe to our Newsletter
+      </Typography>
+      <Container component="main" maxWidth="xs">
+        <CssBaseline />
+        <Box
+          sx={{
+            marginTop: 8,
 
-          <Grid container spacing={2}>
-            <Grid item xs={12}>
-              <TextField
-                required
-                fullWidth
-                id="email"
-                label="Email Address"
-                name="email"
-                autoComplete="email"
-              />
-            </Grid>
-          </Grid>
-
-          <Grid item xs={12}>
-            <Grid
-              name="phone_number"
-              rules={{ validate: matchIsValidTel }}
-              render={({ field, fieldState }) => (
-                <MuiTelInput
-                  {...field}
+            alignItems: "center",
+          }}
+        >
+          {" "}
+          <Box component="form" noValidate sx={{ mt: 3 }}>
+            <Grid container spacing={2}>
+              <Grid item xs={12}>
+                <TextField
+                  required
                   fullWidth
-                  id="phone_number"
-                  label="Phone Number"
-                  autoComplete="primary-phone-number"
-                  forceCallingCode
-                  focusOnSelectCountry
-                  placeholder="Phone Number"
-                  // onlyCountries={availableCountries}
-                  defaultCountry={"CM"}
-                  helperText={fieldState.invalid ? "Tel is invalid" : ""}
-                  error={fieldState.invalid}
+                  id="Name"
+                  label="Name"
+                  name="name"
+                  autoComplete="name"
                 />
-              )}
-            />
-          </Grid>
+              </Grid>
+            </Grid>
 
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            sx={{ mt: 3, mb: 2 }}
-          >
-            Submit
-          </Button>
+            <Grid container spacing={2}>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  id="email"
+                  label="Email Address"
+                  name="email"
+                  autoComplete="email"
+                />
+              </Grid>
+            </Grid>
+
+            <Grid item xs={12}>
+              <Grid
+                name="phone_number"
+                rules={{ validate: matchIsValidTel }}
+                render={({ field, fieldState }) => (
+                  <MuiTelInput
+                    {...field}
+                    fullWidth
+                    id="phone_number"
+                    label="Phone Number"
+                    autoComplete="primary-phone-number"
+                    forceCallingCode
+                    focusOnSelectCountry
+                    placeholder="Phone Number"
+                    // onlyCountries={availableCountries}
+                    defaultCountry={"CM"}
+                    helperText={fieldState.invalid ? "Tel is invalid" : ""}
+                    error={fieldState.invalid}
+                  />
+                )}
+              />
+            </Grid>
+
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Submit
+            </Button>
+          </Box>
         </Box>
-      </Box>
-    </Container>
+      </Container>
+    </>
   );
 }
 
