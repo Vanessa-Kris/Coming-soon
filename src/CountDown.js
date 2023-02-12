@@ -1,51 +1,48 @@
-import Countdown from 'react-countdown';
-import Typography from '@mui/material/Typography';
+import Countdown from "react-countdown";
+import Typography from "@mui/material/Typography";
 
-function CountDown  ()  {
-    return(
-        <>
-         <Typography spacing="3"
+function CountDown() {
+  return (
+    <>
+      <Typography
+        spacing="3"
         align="center"
-        justifyContent= "center"
+        justifyContent="center"
         variant="h2"
         noWrap
         sx={{
           mr: 1,
-          display: { xs: 'block', md: 'flex' },
-          fontFamily: 'monospace',
+          display: { xs: "block", md: "flex" },
+          fontFamily: "monospace",
           fontWeight: 700,
           fontSize: { xs: 20, md: 80 },
-          letterSpacing: '.2rem',
-          color: '#fff',
-          textDecoration: 'none',
+          letterSpacing: ".2rem",
+          color: "#fff",
+          textDecoration: "none",
         }}
       >
-     We are coming soon!
+        We are coming soon!
       </Typography>
-       
 
-        <Typography
+      <Typography
         align="center"
-        justifyContent= "center"
+        justifyContent="center"
         variant="h1"
         noWrap
         sx={{
           mr: 1,
-          display: { xs: 'block', md: 'flex' },
-          fontFamily: 'monospace',
+          display: { xs: "block", md: "flex" },
+          fontFamily: "monospace",
           fontWeight: 700,
           fontSize: { xs: 30, md: 150 },
-          letterSpacing: '.3rem',
-          color: '#fff',
-          textDecoration: 'none',
+          letterSpacing: ".3rem",
+          color: "#fff",
+          textDecoration: "none",
         }}
       >
-     
-      <Countdown date={Date.now() + 1000 * 60 * 60 * 24} />
+        <Countdown date={Date.now() + 1000 * 60 * 60 * 24} />
       </Typography>
-
-    
     </>
-    )
-} 
- export default CountDown;
+  );
+}
+export default CountDown;
