@@ -5,10 +5,15 @@ import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import { MuiTelInput, matchIsValidTel } from "mui-tel-input";
+import { MuiTelInput } from "mui-tel-input";
 import Container from "@mui/material/Container";
 
 function Subscribe() {
+  const [value, setValue] = React.useState("");
+
+  const handleChange = (newValue) => {
+    setValue(newValue);
+  };
   return (
     <>
       <Typography
@@ -30,20 +35,34 @@ function Subscribe() {
       >
         Subscribe to our Newsletter
       </Typography>
+      <p
+        className="text-light text-center mt-3"
+        style={{ fontFamily: "monospace" }}
+      >
+        Be the first to get updates on new arrivals and discount sales
+      </p>
+
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
           sx={{
             marginTop: 8,
-
             alignItems: "center",
           }}
         >
-          {" "}
-          <Box component="form" noValidate sx={{ mt: 3 }}>
+          <Box component="form" noValidate sx={{ mb: 3 }}>
+            <Typography
+              sx={{
+                color: "#fff",
+                textDecoration: "none",
+              }}
+            >
+              Name
+            </Typography>
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField
+                  sx={{ mb: 1, input: { color: "white" } }}
                   required
                   fullWidth
                   id="Name"
@@ -54,39 +73,44 @@ function Subscribe() {
               </Grid>
             </Grid>
 
+            <Typography
+              sx={{
+                color: "#fff",
+                textDecoration: "none",
+              }}
+            >
+              Email
+            </Typography>
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField
+                  sx={{ mb: 1, input: { color: "white" } }}
                   required
                   fullWidth
                   id="email"
                   label="Email Address"
                   name="email"
                   autoComplete="email"
+                  Color="#fff"
                 />
               </Grid>
             </Grid>
 
             <Grid item xs={12}>
-              <Grid
-                name="phone_number"
-                rules={{ validate: matchIsValidTel }}
-                render={({ field, fieldState }) => (
-                  <MuiTelInput
-                    {...field}
-                    fullWidth
-                    id="phone_number"
-                    label="Phone Number"
-                    autoComplete="primary-phone-number"
-                    forceCallingCode
-                    focusOnSelectCountry
-                    placeholder="Phone Number"
-                    // onlyCountries={availableCountries}
-                    defaultCountry={"CM"}
-                    helperText={fieldState.invalid ? "Tel is invalid" : ""}
-                    error={fieldState.invalid}
-                  />
-                )}
+              <Grid name="phone_number" sx={{ mt: 1 }} />
+              <MuiTelInput
+                sx={{ input: { color: "white" } }}
+                value={value}
+                onChange={handleChange}
+                id="phone_number"
+                autoComplete="primary-phone-number"
+                forceCallingCode
+                focusOnSelectCountry
+                placeholder="Phone Number"
+                // onlyCountries={availableCountries}
+                defaultCountry={"CM"}
+                Color="#fff"
+                fullWidth
               />
             </Grid>
 

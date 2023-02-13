@@ -15,3 +15,37 @@ body {
     height: 100% !important;
   }
 }
+
+
+  label.Mui-focused {
+    color: white !important;
+  }
+  .MuiInput-underline:after {
+    border-bottom-color: #ffffff !important;
+  }
+  .MuiOutlinedInput-root {
+      border-color: white !important;
+    }
+   :hover fieldset {
+      border-color: white !important;
+    }
+   .Mui-focused fieldset {
+      border-color: #ffffff !important;
+    }
+  
+    .FormControl {
+      color: #ffffff !important;
+    }
+    fieldset {
+      border-color: white !important;
+    }
+
+
+.MuiTelInput {
+color: #ffffff;
+}
+
+
+.css-1nrbl98-MuiTypography-root {
+  color: #ffffff;
+}
